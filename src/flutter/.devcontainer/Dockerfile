@@ -17,7 +17,7 @@ ENV PATH="${ANDROID_HOME}/cmdline-tools/latest/bin:${ANDROID_HOME}/platform-tool
 
 # Get latest Java SDK
 ENV JAVA_HOME=/opt/java/openjdk
-COPY --from=eclipse-temurin:latest $JAVA_HOME $JAVA_HOME
+COPY --from=eclipse-temurin:17-jdk $JAVA_HOME $JAVA_HOME
 ENV PATH="${JAVA_HOME}/bin:${PATH}"
 
 # Get latest Flutter
